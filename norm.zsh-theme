@@ -3,10 +3,10 @@ ZSH_THEME_CURRENT_RUBY_=""
 ZSH_THEME_CURRENT_RUBY_PREFIX_=" %{$fg[yellow]%}→ %{$fg[white]%}"
 ZSH_THEME_CURRENT_RUBY_SUFFIX_="%{$reset_color%}"
 if [ -e ~/.rvm/bin/rvm-prompt ]; then
-	ZSH_THEME_CURRENT_RUBY_="$ZSH_THEME_GIT_PROMPT_PREFIX_\$(~/.rvm/bin/rvm-prompt i v)$ZSH_THEME_CURRENT_RUBY_SUFFIX_"
+	ZSH_THEME_CURRENT_RUBY_="$ZSH_THEME_GIT_PROMPT_PREFIX_$(~/.rvm/bin/rvm-prompt i v)$ZSH_THEME_CURRENT_RUBY_SUFFIX_"
 else
 	if which rbenv &> /dev/null; then
-		ZSH_THEME_CURRENT_RUBY_="$ZSH_THEME_GIT_PROMPT_PREFIX_\$(rbenv version | sed -e 's/ (set.*$//')%{$fg[white]%}]$ZSH_THEME_CURRENT_RUBY_PREFIX_"
+		ZSH_THEME_CURRENT_RUBY_="$ZSH_THEME_GIT_PROMPT_PREFIX_$(rbenv version | sed -e 's/ (set.*$//')%{$fg[white]%}]$ZSH_THEME_CURRENT_RUBY_PREFIX_"
 	fi
 fi
 
