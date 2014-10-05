@@ -2,7 +2,7 @@
 ZSH_THEME_CURRENT_RUBY_=""
 if [ -e ~/.rbenv/version ]; then
 	ZSH_THEME_CURRENT_RUBY_="%{$fg[white]%} $(cat ~/.rbenv/version)%{$fg[yellow]%} → %{$reset_color%}"
-else
+fi
 
 PROMPT='%{$fg[yellow]%}λ$ZSH_THEME_CURRENT_RUBY_ %m %{$fg[green]%}%c %{$fg[yellow]%}→ $(git_prompt_info)%{$reset_color%}'
 
